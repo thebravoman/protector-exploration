@@ -43,7 +43,7 @@ Article.all.restrict!(User.find_by(role: "user")).count
  => 2 
 
 # There are 4 articles if you are an admin
- Article.all.restrict!(User.find_by(role: "admin")).count
+Article.all.restrict!(User.find_by(role: "admin")).count
   User Load (0.3ms)  SELECT  "users".* FROM "users" WHERE "users"."role" = ? LIMIT 1  [["role", "admin"]]
    (0.2ms)  SELECT COUNT(*) FROM "articles"
  => 4 
